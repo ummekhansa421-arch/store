@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Electronics_Store
+namespace Electronics_Store.Views
 {
-    public partial class Form1 : Form
+    public partial class DashboardView : UserControl
     {
-        public Form1()
+        public DashboardView()
         {
             InitializeComponent();
+        }
+
+        private void lbsaleV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbrevenu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
