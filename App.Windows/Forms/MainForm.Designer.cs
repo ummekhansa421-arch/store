@@ -28,168 +28,182 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnldashboard = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlContainer = new System.Windows.Forms.Panel();
-            this.pnlsidebar = new System.Windows.Forms.Panel();
-            this.bntdashboard = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnBillings = new System.Windows.Forms.Button();
-            this.btnEmployees = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbleft = new System.Windows.Forms.Label();
-            this.pnldashboard.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlsidebar.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            pnldashboard = new Panel();
+            panel2 = new Panel();
+            pnlContainer = new Panel();
+            pnlsidebar = new Panel();
+            bntdashboard = new Button();
+            btnReports = new Button();
+            btnPlaceOrder = new Button();
+            btnEmployees = new Button();
+            btnSales = new Button();
+            btnCustomers = new Button();
+            btnProducts = new Button();
+            panel1 = new Panel();
+            lbleft = new Label();
+            pnldashboard.SuspendLayout();
+            panel2.SuspendLayout();
+            pnlsidebar.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // pnldashboard
             // 
-            this.pnldashboard.Controls.Add(this.panel2);
-            this.pnldashboard.Controls.Add(this.panel1);
-            this.pnldashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnldashboard.Location = new System.Drawing.Point(0, 0);
-            this.pnldashboard.Name = "pnldashboard";
-            this.pnldashboard.Size = new System.Drawing.Size(1078, 687);
-            this.pnldashboard.TabIndex = 0;
+            pnldashboard.Controls.Add(panel2);
+            pnldashboard.Controls.Add(panel1);
+            pnldashboard.Dock = DockStyle.Fill;
+            pnldashboard.Location = new Point(0, 0);
+            pnldashboard.Margin = new Padding(3, 4, 3, 4);
+            pnldashboard.Name = "pnldashboard";
+            pnldashboard.Size = new Size(1198, 859);
+            pnldashboard.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pnlContainer);
-            this.panel2.Controls.Add(this.pnlsidebar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1078, 587);
-            this.panel2.TabIndex = 3;
+            panel2.Controls.Add(pnlContainer);
+            panel2.Controls.Add(pnlsidebar);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 125);
+            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1198, 734);
+            panel2.TabIndex = 3;
             // 
             // pnlContainer
             // 
-            this.pnlContainer.BackColor = System.Drawing.Color.White;
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(200, 0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(878, 587);
-            this.pnlContainer.TabIndex = 1;
+            pnlContainer.BackColor = Color.White;
+            pnlContainer.Dock = DockStyle.Fill;
+            pnlContainer.Location = new Point(222, 0);
+            pnlContainer.Margin = new Padding(3, 4, 3, 4);
+            pnlContainer.Name = "pnlContainer";
+            pnlContainer.Size = new Size(976, 734);
+            pnlContainer.TabIndex = 1;
             // 
             // pnlsidebar
             // 
-            this.pnlsidebar.Controls.Add(this.bntdashboard);
-            this.pnlsidebar.Controls.Add(this.btnReports);
-            this.pnlsidebar.Controls.Add(this.btnBillings);
-            this.pnlsidebar.Controls.Add(this.btnEmployees);
-            this.pnlsidebar.Controls.Add(this.btnSales);
-            this.pnlsidebar.Controls.Add(this.btnCustomers);
-            this.pnlsidebar.Controls.Add(this.btnProducts);
-            this.pnlsidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlsidebar.Location = new System.Drawing.Point(0, 0);
-            this.pnlsidebar.Name = "pnlsidebar";
-            this.pnlsidebar.Size = new System.Drawing.Size(200, 587);
-            this.pnlsidebar.TabIndex = 0;
+            pnlsidebar.Controls.Add(bntdashboard);
+            pnlsidebar.Controls.Add(btnReports);
+            pnlsidebar.Controls.Add(btnPlaceOrder);
+            pnlsidebar.Controls.Add(btnEmployees);
+            pnlsidebar.Controls.Add(btnSales);
+            pnlsidebar.Controls.Add(btnCustomers);
+            pnlsidebar.Controls.Add(btnProducts);
+            pnlsidebar.Dock = DockStyle.Left;
+            pnlsidebar.Location = new Point(0, 0);
+            pnlsidebar.Margin = new Padding(3, 4, 3, 4);
+            pnlsidebar.Name = "pnlsidebar";
+            pnlsidebar.Size = new Size(222, 734);
+            pnlsidebar.TabIndex = 0;
             // 
             // bntdashboard
             // 
-            this.bntdashboard.Location = new System.Drawing.Point(40, 30);
-            this.bntdashboard.Name = "bntdashboard";
-            this.bntdashboard.Size = new System.Drawing.Size(120, 50);
-            this.bntdashboard.TabIndex = 13;
-            this.bntdashboard.Text = "Dashboard";
-            this.bntdashboard.UseVisualStyleBackColor = true;
-            this.bntdashboard.Click += new System.EventHandler(this.bntdashboard_Click);
+            bntdashboard.Location = new Point(44, 38);
+            bntdashboard.Margin = new Padding(3, 4, 3, 4);
+            bntdashboard.Name = "bntdashboard";
+            bntdashboard.Size = new Size(133, 62);
+            bntdashboard.TabIndex = 13;
+            bntdashboard.Text = "Dashboard";
+            bntdashboard.UseVisualStyleBackColor = true;
+            bntdashboard.Click += bntdashboard_Click;
             // 
             // btnReports
             // 
-            this.btnReports.Location = new System.Drawing.Point(40, 442);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(120, 50);
-            this.btnReports.TabIndex = 12;
-            this.btnReports.Text = "Reports";
-            this.btnReports.UseVisualStyleBackColor = true;
+            btnReports.Location = new Point(44, 552);
+            btnReports.Margin = new Padding(3, 4, 3, 4);
+            btnReports.Name = "btnReports";
+            btnReports.Size = new Size(133, 62);
+            btnReports.TabIndex = 12;
+            btnReports.Text = "Reports";
+            btnReports.UseVisualStyleBackColor = true;
             // 
-            // btnBillings
+            // btnPlaceOrder
             // 
-            this.btnBillings.Location = new System.Drawing.Point(40, 238);
-            this.btnBillings.Name = "btnBillings";
-            this.btnBillings.Size = new System.Drawing.Size(120, 50);
-            this.btnBillings.TabIndex = 11;
-            this.btnBillings.Text = "Billings";
-            this.btnBillings.UseVisualStyleBackColor = true;
+            btnPlaceOrder.Location = new Point(44, 298);
+            btnPlaceOrder.Margin = new Padding(3, 4, 3, 4);
+            btnPlaceOrder.Name = "btnPlaceOrder";
+            btnPlaceOrder.Size = new Size(133, 62);
+            btnPlaceOrder.TabIndex = 11;
+            btnPlaceOrder.Text = "Place Order";
+            btnPlaceOrder.UseVisualStyleBackColor = true;
+            btnPlaceOrder.Click += btnPlaceOrder_Click;
             // 
             // btnEmployees
             // 
-            this.btnEmployees.Location = new System.Drawing.Point(40, 372);
-            this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(120, 50);
-            this.btnEmployees.TabIndex = 10;
-            this.btnEmployees.Text = "Employees";
-            this.btnEmployees.UseVisualStyleBackColor = true;
+            btnEmployees.Location = new Point(44, 465);
+            btnEmployees.Margin = new Padding(3, 4, 3, 4);
+            btnEmployees.Name = "btnEmployees";
+            btnEmployees.Size = new Size(133, 62);
+            btnEmployees.TabIndex = 10;
+            btnEmployees.Text = "Employees";
+            btnEmployees.UseVisualStyleBackColor = true;
             // 
             // btnSales
             // 
-            this.btnSales.Location = new System.Drawing.Point(40, 304);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(120, 50);
-            this.btnSales.TabIndex = 9;
-            this.btnSales.Text = "Sales";
-            this.btnSales.UseVisualStyleBackColor = true;
+            btnSales.Location = new Point(44, 380);
+            btnSales.Margin = new Padding(3, 4, 3, 4);
+            btnSales.Name = "btnSales";
+            btnSales.Size = new Size(133, 62);
+            btnSales.TabIndex = 9;
+            btnSales.Text = "Sales";
+            btnSales.UseVisualStyleBackColor = true;
             // 
             // btnCustomers
             // 
-            this.btnCustomers.Location = new System.Drawing.Point(40, 169);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(120, 50);
-            this.btnCustomers.TabIndex = 8;
-            this.btnCustomers.Text = "Customers";
-            this.btnCustomers.UseVisualStyleBackColor = true;
-            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            btnCustomers.Location = new Point(44, 211);
+            btnCustomers.Margin = new Padding(3, 4, 3, 4);
+            btnCustomers.Name = "btnCustomers";
+            btnCustomers.Size = new Size(133, 62);
+            btnCustomers.TabIndex = 8;
+            btnCustomers.Text = "Customers";
+            btnCustomers.UseVisualStyleBackColor = true;
+            btnCustomers.Click += btnCustomers_Click;
             // 
             // btnProducts
             // 
-            this.btnProducts.Location = new System.Drawing.Point(40, 97);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(120, 50);
-            this.btnProducts.TabIndex = 7;
-            this.btnProducts.Text = "Products";
-            this.btnProducts.UseVisualStyleBackColor = true;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            btnProducts.Location = new Point(44, 121);
+            btnProducts.Margin = new Padding(3, 4, 3, 4);
+            btnProducts.Name = "btnProducts";
+            btnProducts.Size = new Size(133, 62);
+            btnProducts.TabIndex = 7;
+            btnProducts.Text = "Products";
+            btnProducts.UseVisualStyleBackColor = true;
+            btnProducts.Click += btnProducts_Click;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lbleft);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 100);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.Controls.Add(lbleft);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1198, 125);
+            panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // lbleft
             // 
-            this.lbleft.AutoSize = true;
-            this.lbleft.Location = new System.Drawing.Point(34, 30);
-            this.lbleft.Name = "lbleft";
-            this.lbleft.Size = new System.Drawing.Size(130, 20);
-            this.lbleft.TabIndex = 0;
-            this.lbleft.Text = "Electronics Store";
+            lbleft.AutoSize = true;
+            lbleft.Location = new Point(38, 38);
+            lbleft.Name = "lbleft";
+            lbleft.Size = new Size(141, 25);
+            lbleft.TabIndex = 0;
+            lbleft.Text = "Electronics Store";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 687);
-            this.Controls.Add(this.pnldashboard);
-            this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.pnldashboard.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.pnlsidebar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1198, 859);
+            Controls.Add(pnldashboard);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MainForm";
+            Text = "MainForm";
+            pnldashboard.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            pnlsidebar.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
 
         }
 
@@ -203,7 +217,7 @@
         private System.Windows.Forms.Panel pnlsidebar;
         private System.Windows.Forms.Button bntdashboard;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnBillings;
+        private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Button btnEmployees;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnCustomers;

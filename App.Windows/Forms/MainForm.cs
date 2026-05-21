@@ -14,11 +14,13 @@ using System.Windows.Forms;
 using System.Configuration;
 using Apps.Core.Services;
 using Microsoft.Data.SqlClient;
+using App.Windows.Forms;
+using App.Windows.Views;
 
 namespace Electronics_Store.Forms
 {
     public partial class MainForm : Form
-        {
+    {
         private Button _activeButton;
 
         private readonly Color NavNormalBlack = Color.FromArgb(244, 244, 246);
@@ -31,7 +33,7 @@ namespace Electronics_Store.Forms
         IProductService _productService;
 
         ICustomerService _customerService;
-        
+
 
         private readonly Dictionary<Type, UserControl> _views = new Dictionary<Type, UserControl>();
 
@@ -43,7 +45,7 @@ namespace Electronics_Store.Forms
             _customerService = new DBCustomerService();
 
         }
-         private void SetActiveNavButton(Button btn)
+        private void SetActiveNavButton(Button btn)
         {
             if (btn == null) return;
 
@@ -68,18 +70,18 @@ namespace Electronics_Store.Forms
 
         }
 
-        
 
-        
 
-       
+
+
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-       
+
         private void ShowView<T>(Func<T> factory) where T : UserControl
         {
             var key = typeof(T);
@@ -97,7 +99,7 @@ namespace Electronics_Store.Forms
 
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -118,6 +120,14 @@ namespace Electronics_Store.Forms
         private void bntdashboard_Click(object sender, EventArgs e)
         {
             ShowView(() => new DashboardView());
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            ShowView(() => new OrderView());
+
+            
+
         }
     }
 }

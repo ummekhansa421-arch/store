@@ -108,6 +108,7 @@ namespace Apps.Core.Services
                     };
 
                     customers.Add(customer);
+
                 }
             }
 
