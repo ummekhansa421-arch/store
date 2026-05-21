@@ -11,6 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using Apps.Core.Services;
+using Microsoft.Data.SqlClient;
 
 namespace Electronics_Store.Forms
 {
@@ -23,14 +26,16 @@ namespace Electronics_Store.Forms
 
         private readonly Color NavNormalFore = Color.Black;
         private readonly Color NavActiveFore = Color.Black;
-        InMemoryCustomerService _customerService = new InMemoryCustomerService();
+        ICustomerService _customerService;
+        
 
         private readonly Dictionary<Type, UserControl> _views = new Dictionary<Type, UserControl>();
 
         public MainForm()
         {
             InitializeComponent();
-             
+            _customerService = new DBCustomerService();
+
         }
          private void SetActiveNavButton(Button btn)
         {
