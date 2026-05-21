@@ -26,6 +26,10 @@ namespace Electronics_Store.Forms
 
         private readonly Color NavNormalFore = Color.Black;
         private readonly Color NavActiveFore = Color.Black;
+
+        private readonly string connectionString;
+        IProductService _productService;
+
         ICustomerService _customerService;
         
 
@@ -34,6 +38,8 @@ namespace Electronics_Store.Forms
         public MainForm()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["ElectronicStoreDB"].ConnectionString;
+            _productService = new DBProductService(connectionString);
             _customerService = new DBCustomerService();
 
         }
@@ -100,6 +106,7 @@ namespace Electronics_Store.Forms
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
+            ShowView(() => new productview(_productService));
 
         }
 
