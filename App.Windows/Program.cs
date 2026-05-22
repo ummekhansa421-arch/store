@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
 
 
 
@@ -20,7 +21,8 @@ namespace Electronics_Store
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Forms.MainForm());
+            //Application.Run(new Forms.MainForm());
+            Application.Run(new App.Windows.Forms.LoginForm());
         }
     }
 }

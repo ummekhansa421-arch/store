@@ -17,13 +17,16 @@ namespace App.Windows.Views
 {
     public partial class OrderView : UserControl
     {
+        public static OrderView Instance;
         private readonly ICustomerService _customerService;
         private readonly IProductService _productService;
         private readonly string connectionString;
         private readonly IOrderService _orderService;
+        public static event Action OrderCreated;
         public OrderView()
         {
             InitializeComponent();
+            Instance = this;
             connectionString = ConfigurationManager.ConnectionStrings["ElectronicStoreDB"].ConnectionString;
             _orderService = new DBOrderService(connectionString);
             _customerService = new DBCustomerService();
@@ -136,6 +139,7 @@ namespace App.Windows.Views
 
             );
             UpdateTotalAmount();
+            OrderCreated?.Invoke();
         }
 
         private void tbsearchcustomer_TextChanged(object sender, EventArgs e)

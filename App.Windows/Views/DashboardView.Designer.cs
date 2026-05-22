@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tbldashboaedview = new TableLayoutPanel();
             tblkpi = new TableLayoutPanel();
             flpsales = new Panel();
-            lbsaleV = new Label();
+            lblSales = new Label();
             lbsale = new Label();
             flporders = new Panel();
-            lblorderV = new Label();
+            lblOrders = new Label();
             lborders = new Label();
             flprevenue = new Panel();
-            lbrevenuV = new Label();
+            lblRevenue = new Label();
             lbrevenu = new Label();
             pnldgvstock = new Panel();
-            listViewLowStock = new ListView();
-            columnHeader4 = new ColumnHeader();
-            columnHeader5 = new ColumnHeader();
+            dgvLowStock = new DataGridView();
             label1 = new Label();
             pnldgvorders = new Panel();
-            listViewOrders = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            stactus = new ColumnHeader();
+            dgvRecentOrders = new DataGridView();
             label2 = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
             tbldashboaedview.SuspendLayout();
             tblkpi.SuspendLayout();
             flpsales.SuspendLayout();
             flporders.SuspendLayout();
             flprevenue.SuspendLayout();
             pnldgvstock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLowStock).BeginInit();
             pnldgvorders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentOrders).BeginInit();
             SuspendLayout();
             // 
             // tbldashboaedview
@@ -99,8 +98,8 @@
             // 
             // flpsales
             // 
-            flpsales.BackColor = Color.FromArgb(224, 224, 224);
-            flpsales.Controls.Add(lbsaleV);
+            flpsales.BackColor = Color.WhiteSmoke;
+            flpsales.Controls.Add(lblSales);
             flpsales.Controls.Add(lbsale);
             flpsales.Dock = DockStyle.Fill;
             flpsales.Location = new Point(6, 6);
@@ -109,16 +108,16 @@
             flpsales.Size = new Size(408, 180);
             flpsales.TabIndex = 0;
             // 
-            // lbsaleV
+            // lblSales
             // 
-            lbsaleV.AutoSize = true;
-            lbsaleV.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbsaleV.Location = new Point(303, 71);
-            lbsaleV.Name = "lbsaleV";
-            lbsaleV.Size = new Size(59, 20);
-            lbsaleV.TabIndex = 1;
-            lbsaleV.Text = "11111";
-            lbsaleV.Click += lbsaleV_Click;
+            lblSales.AutoSize = true;
+            lblSales.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSales.Location = new Point(303, 71);
+            lblSales.Name = "lblSales";
+            lblSales.Size = new Size(59, 20);
+            lblSales.TabIndex = 1;
+            lblSales.Text = "11111";
+            lblSales.Click += lbsaleV_Click;
             // 
             // lbsale
             // 
@@ -132,8 +131,8 @@
             // 
             // flporders
             // 
-            flporders.BackColor = Color.FromArgb(224, 224, 224);
-            flporders.Controls.Add(lblorderV);
+            flporders.BackColor = Color.WhiteSmoke;
+            flporders.Controls.Add(lblOrders);
             flporders.Controls.Add(lborders);
             flporders.Dock = DockStyle.Fill;
             flporders.Location = new Point(426, 6);
@@ -142,15 +141,15 @@
             flporders.Size = new Size(408, 180);
             flporders.TabIndex = 1;
             // 
-            // lblorderV
+            // lblOrders
             // 
-            lblorderV.AutoSize = true;
-            lblorderV.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblorderV.Location = new Point(328, 71);
-            lblorderV.Name = "lblorderV";
-            lblorderV.Size = new Size(39, 20);
-            lblorderV.TabIndex = 1;
-            lblorderV.Text = "100";
+            lblOrders.AutoSize = true;
+            lblOrders.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOrders.Location = new Point(328, 71);
+            lblOrders.Name = "lblOrders";
+            lblOrders.Size = new Size(39, 20);
+            lblOrders.TabIndex = 1;
+            lblOrders.Text = "100";
             // 
             // lborders
             // 
@@ -164,8 +163,8 @@
             // 
             // flprevenue
             // 
-            flprevenue.BackColor = Color.FromArgb(224, 224, 224);
-            flprevenue.Controls.Add(lbrevenuV);
+            flprevenue.BackColor = Color.WhiteSmoke;
+            flprevenue.Controls.Add(lblRevenue);
             flprevenue.Controls.Add(lbrevenu);
             flprevenue.Dock = DockStyle.Fill;
             flprevenue.Location = new Point(846, 6);
@@ -174,15 +173,15 @@
             flprevenue.Size = new Size(410, 180);
             flprevenue.TabIndex = 2;
             // 
-            // lbrevenuV
+            // lblRevenue
             // 
-            lbrevenuV.AutoSize = true;
-            lbrevenuV.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbrevenuV.Location = new Point(278, 71);
-            lbrevenuV.Name = "lbrevenuV";
-            lbrevenuV.Size = new Size(103, 20);
-            lbrevenuV.TabIndex = 1;
-            lbrevenuV.Text = "1234557 pk";
+            lblRevenue.AutoSize = true;
+            lblRevenue.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRevenue.Location = new Point(278, 71);
+            lblRevenue.Name = "lblRevenue";
+            lblRevenue.Size = new Size(103, 20);
+            lblRevenue.TabIndex = 1;
+            lblRevenue.Text = "1234557 pk";
             // 
             // lbrevenu
             // 
@@ -198,7 +197,7 @@
             // pnldgvstock
             // 
             pnldgvstock.BackColor = Color.WhiteSmoke;
-            pnldgvstock.Controls.Add(listViewLowStock);
+            pnldgvstock.Controls.Add(dgvLowStock);
             pnldgvstock.Controls.Add(label1);
             pnldgvstock.Dock = DockStyle.Fill;
             pnldgvstock.Location = new Point(3, 204);
@@ -207,27 +206,16 @@
             pnldgvstock.Size = new Size(1262, 282);
             pnldgvstock.TabIndex = 1;
             // 
-            // listViewLowStock
+            // dgvLowStock
             // 
-            listViewLowStock.Columns.AddRange(new ColumnHeader[] { columnHeader4, columnHeader5 });
-            listViewLowStock.Dock = DockStyle.Fill;
-            listViewLowStock.FullRowSelect = true;
-            listViewLowStock.GridLines = true;
-            listViewLowStock.Location = new Point(0, 20);
-            listViewLowStock.Margin = new Padding(3, 4, 3, 4);
-            listViewLowStock.Name = "listViewLowStock";
-            listViewLowStock.Size = new Size(1262, 262);
-            listViewLowStock.TabIndex = 1;
-            listViewLowStock.UseCompatibleStateImageBehavior = false;
-            listViewLowStock.View = View.Details;
-            // 
-            // columnHeader4
-            // 
-            columnHeader4.Text = "Product";
-            // 
-            // columnHeader5
-            // 
-            columnHeader5.Text = "Stock";
+            dgvLowStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLowStock.Dock = DockStyle.Fill;
+            dgvLowStock.Location = new Point(0, 20);
+            dgvLowStock.Name = "dgvLowStock";
+            dgvLowStock.RowHeadersVisible = false;
+            dgvLowStock.RowHeadersWidth = 62;
+            dgvLowStock.Size = new Size(1262, 262);
+            dgvLowStock.TabIndex = 1;
             // 
             // label1
             // 
@@ -243,7 +231,7 @@
             // pnldgvorders
             // 
             pnldgvorders.BackColor = Color.WhiteSmoke;
-            pnldgvorders.Controls.Add(listViewOrders);
+            pnldgvorders.Controls.Add(dgvRecentOrders);
             pnldgvorders.Controls.Add(label2);
             pnldgvorders.Dock = DockStyle.Fill;
             pnldgvorders.Location = new Point(3, 494);
@@ -252,35 +240,16 @@
             pnldgvorders.Size = new Size(1262, 282);
             pnldgvorders.TabIndex = 2;
             // 
-            // listViewOrders
+            // dgvRecentOrders
             // 
-            listViewOrders.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, stactus });
-            listViewOrders.Dock = DockStyle.Fill;
-            listViewOrders.FullRowSelect = true;
-            listViewOrders.GridLines = true;
-            listViewOrders.Location = new Point(0, 20);
-            listViewOrders.Margin = new Padding(3, 4, 3, 4);
-            listViewOrders.Name = "listViewOrders";
-            listViewOrders.Size = new Size(1262, 262);
-            listViewOrders.TabIndex = 1;
-            listViewOrders.UseCompatibleStateImageBehavior = false;
-            listViewOrders.View = View.Details;
-            // 
-            // columnHeader1
-            // 
-            columnHeader1.Text = "Order Id";
-            // 
-            // columnHeader2
-            // 
-            columnHeader2.Text = "Customer";
-            // 
-            // columnHeader3
-            // 
-            columnHeader3.Text = "Product";
-            // 
-            // stactus
-            // 
-            stactus.Text = "Status";
+            dgvRecentOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRecentOrders.Dock = DockStyle.Fill;
+            dgvRecentOrders.Location = new Point(0, 20);
+            dgvRecentOrders.Name = "dgvRecentOrders";
+            dgvRecentOrders.RowHeadersVisible = false;
+            dgvRecentOrders.RowHeadersWidth = 62;
+            dgvRecentOrders.Size = new Size(1262, 262);
+            dgvRecentOrders.TabIndex = 1;
             // 
             // label2
             // 
@@ -292,6 +261,18 @@
             label2.Size = new Size(126, 20);
             label2.TabIndex = 0;
             label2.Text = "Recent Orders";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick_1;
+            // 
+            // timer2
+            // 
+            timer2.Enabled = true;
+            timer2.Interval = 2000;
+            timer2.Tick += timer2_Tick;
             // 
             // DashboardView
             // 
@@ -311,8 +292,10 @@
             flprevenue.PerformLayout();
             pnldgvstock.ResumeLayout(false);
             pnldgvstock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvLowStock).EndInit();
             pnldgvorders.ResumeLayout(false);
             pnldgvorders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRecentOrders).EndInit();
             ResumeLayout(false);
 
         }
@@ -324,23 +307,19 @@
         private System.Windows.Forms.Panel flpsales;
         private System.Windows.Forms.Panel flporders;
         private System.Windows.Forms.Panel flprevenue;
-        private System.Windows.Forms.Label lbsaleV;
+        private System.Windows.Forms.Label lblSales;
         private System.Windows.Forms.Label lbsale;
-        private System.Windows.Forms.Label lblorderV;
+        private System.Windows.Forms.Label lblOrders;
         private System.Windows.Forms.Label lborders;
-        private System.Windows.Forms.Label lbrevenuV;
+        private System.Windows.Forms.Label lblRevenue;
         private System.Windows.Forms.Label lbrevenu;
         private System.Windows.Forms.Panel pnldgvstock;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnldgvorders;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listViewLowStock;
-        private System.Windows.Forms.ListView listViewOrders;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader stactus;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private DataGridView dgvLowStock;
+        private DataGridView dgvRecentOrders;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

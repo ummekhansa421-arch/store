@@ -33,6 +33,7 @@ namespace Electronics_Store.Forms
         IProductService _productService;
 
         ICustomerService _customerService;
+        IAuthService _authService;
 
 
         private readonly Dictionary<Type, UserControl> _views = new Dictionary<Type, UserControl>();
@@ -42,6 +43,7 @@ namespace Electronics_Store.Forms
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["ElectronicStoreDB"].ConnectionString;
             _productService = new DBProductService(connectionString);
+            _authService = new DBAuthService(connectionString);
             _customerService = new DBCustomerService();
 
         }

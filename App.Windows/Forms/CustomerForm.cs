@@ -1,4 +1,5 @@
-﻿using Apps.Core.Contracts;
+﻿using App.Windows.Views;
+using Apps.Core.Contracts;
 using Apps.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using App.Windows.Views;
 
 namespace App.Windows.Forms
 {
@@ -119,6 +121,11 @@ namespace App.Windows.Forms
                         _customerService.Update(_customer);
                     }
                     this.DialogResult = DialogResult.OK;
+
+                    if (OrderView.Instance != null)
+                    {
+                        OrderView.Instance.LoadData();
+                    }
                     this.Close();
 
                 }

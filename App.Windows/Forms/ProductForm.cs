@@ -1,4 +1,5 @@
-﻿using Apps.Core.Contracts;
+﻿using App.Windows.Views;
+using Apps.Core.Contracts;
 using Apps.Core.Models;
 using Apps.Core.Utilities;
 using System;
@@ -10,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.Windows.Views;
+
 
 
 namespace App.Windows.Forms
@@ -119,6 +122,8 @@ namespace App.Windows.Forms
 
 
 
+
+
             }
             else if (_mode == ProductFormModeEnum.Edit)
             {
@@ -137,6 +142,10 @@ namespace App.Windows.Forms
 
                 bool isUpdated = _service.Update(_product);
 
+            }
+            if (OrderView.Instance != null)
+            {
+                OrderView.Instance.LoadData();
             }
             this.Close();
 
