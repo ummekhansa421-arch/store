@@ -33,6 +33,7 @@
             btnLogin = new Button();
             label1 = new Label();
             label2 = new Label();
+            btnSignup = new Button();
             SuspendLayout();
             // 
             // txtEmail
@@ -52,9 +53,9 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(303, 239);
+            btnLogin.Location = new Point(478, 239);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(285, 34);
+            btnLogin.Size = new Size(110, 34);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -78,18 +79,31 @@
             label2.TabIndex = 4;
             label2.Text = "Password :";
             // 
+            // btnSignup
+            // 
+            btnSignup.Location = new Point(303, 239);
+            btnSignup.Name = "btnSignup";
+            btnSignup.Size = new Size(112, 34);
+            btnSignup.TabIndex = 5;
+            btnSignup.Text = "SignUp";
+            btnSignup.UseVisualStyleBackColor = true;
+            btnSignup.Click += btnSignup_Click_1;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSignup);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,5 +115,6 @@
         private Button btnLogin;
         private Label label1;
         private Label label2;
+        private Button btnSignup;
     }
 }

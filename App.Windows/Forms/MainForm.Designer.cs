@@ -33,9 +33,8 @@
             pnlContainer = new Panel();
             pnlsidebar = new Panel();
             bntdashboard = new Button();
-            btnReports = new Button();
             btnPlaceOrder = new Button();
-            btnEmployees = new Button();
+            btnLogout = new Button();
             btnSales = new Button();
             btnCustomers = new Button();
             btnProducts = new Button();
@@ -82,9 +81,8 @@
             // pnlsidebar
             // 
             pnlsidebar.Controls.Add(bntdashboard);
-            pnlsidebar.Controls.Add(btnReports);
             pnlsidebar.Controls.Add(btnPlaceOrder);
-            pnlsidebar.Controls.Add(btnEmployees);
+            pnlsidebar.Controls.Add(btnLogout);
             pnlsidebar.Controls.Add(btnSales);
             pnlsidebar.Controls.Add(btnCustomers);
             pnlsidebar.Controls.Add(btnProducts);
@@ -106,16 +104,6 @@
             bntdashboard.UseVisualStyleBackColor = true;
             bntdashboard.Click += bntdashboard_Click;
             // 
-            // btnReports
-            // 
-            btnReports.Location = new Point(44, 552);
-            btnReports.Margin = new Padding(3, 4, 3, 4);
-            btnReports.Name = "btnReports";
-            btnReports.Size = new Size(133, 62);
-            btnReports.TabIndex = 12;
-            btnReports.Text = "Reports";
-            btnReports.UseVisualStyleBackColor = true;
-            // 
             // btnPlaceOrder
             // 
             btnPlaceOrder.Location = new Point(44, 298);
@@ -127,15 +115,16 @@
             btnPlaceOrder.UseVisualStyleBackColor = true;
             btnPlaceOrder.Click += btnPlaceOrder_Click;
             // 
-            // btnEmployees
+            // btnLogout
             // 
-            btnEmployees.Location = new Point(44, 465);
-            btnEmployees.Margin = new Padding(3, 4, 3, 4);
-            btnEmployees.Name = "btnEmployees";
-            btnEmployees.Size = new Size(133, 62);
-            btnEmployees.TabIndex = 10;
-            btnEmployees.Text = "Employees";
-            btnEmployees.UseVisualStyleBackColor = true;
+            btnLogout.Location = new Point(44, 465);
+            btnLogout.Margin = new Padding(3, 4, 3, 4);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(133, 62);
+            btnLogout.TabIndex = 10;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnSales
             // 
@@ -216,9 +205,8 @@
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel pnlsidebar;
         private System.Windows.Forms.Button bntdashboard;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnPlaceOrder;
-        private System.Windows.Forms.Button btnEmployees;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSales;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnProducts;

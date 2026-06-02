@@ -9,11 +9,17 @@ namespace Apps.Core.Utilities
 {
    public enum  ProductCategoryEnum
     {
-            None,
-            Electronics,
-            Stationery,
-            Clothing,
-            Food
+        None,
+        MobilePhones,
+        Laptops,
+        Desktops,
+        Tablets,
+        Accessories,
+        AudioDevices,
+        Cameras,
+        HomeAppliances,
+        Gaming,
+        Electronics
 
 
 

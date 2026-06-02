@@ -1,24 +1,25 @@
 ﻿using Apps.Core.Contracts;
+using Apps.Core.Models;
+using Apps.Core.Services;
+using Electronics_Store.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Apps.Core.Services;
-using System.Configuration;
-using Apps.Core.Models;
-using System;
 using System.Windows.Forms;
 
 namespace App.Windows.Forms
 {
     public partial class SignupForm : Form
-       
+
     {
         private readonly string connectionString;
         public SignupForm()
@@ -32,7 +33,7 @@ namespace App.Windows.Forms
 
         }
 
-        
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             IAuthService auth = new DBAuthService(connectionString);
@@ -53,6 +54,18 @@ namespace App.Windows.Forms
             auth.Register(user, txtPassword.Text);
 
             MessageBox.Show("Account created successfully!");
+            LoginForm main = new LoginForm();
+            main.Show();
+            this.Hide();
+        }
+
+        
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+
+            this.Close();
         }
     }
 }

@@ -33,7 +33,7 @@ namespace App.Windows.Forms
 
         }
 
-        
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             IAuthService auth = new DBAuthService(connectionString);
@@ -56,6 +56,23 @@ namespace App.Windows.Forms
             {
                 MessageBox.Show("Invalid email or password");
             }
+        }
+
+
+
+
+        private void btnSignup_Click_1(object sender, EventArgs e)
+        {
+            SignupForm signup = new SignupForm();
+            signup.Show();
+
+            this.Hide();
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

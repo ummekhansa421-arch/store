@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Apps.Core.Contracts;
+using Apps.Core.Models;
+using Apps.Core.Utilities;
+using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Apps.Core.Contracts;
-using Apps.Core.Models;
-using Microsoft.Data.SqlClient;
-using System.Data;
 
 namespace Apps.Core.Services
 {
@@ -71,7 +72,8 @@ namespace Apps.Core.Services
             using SqlConnection con = new SqlConnection(_connectionString);
 
             string query = @"
-        SELECT * FROM Product
+        SELECT Id, Name, Category, Stock, Price, Status
+        FROM Product
         WHERE Stock <= 5";
 
             SqlCommand cmd = new SqlCommand(query, con);
@@ -86,7 +88,21 @@ namespace Apps.Core.Services
                 {
                     Id = reader["Id"].ToString(),
                     Name = reader["Name"].ToString(),
-                    Stock = Convert.ToInt32(reader["Stock"])
+
+                    // ENUM handling (important)
+                    Category = (ProductCategoryEnum)Enum.Parse(
+                typeof(ProductCategoryEnum),
+                reader["Category"].ToString()
+            ),
+
+                    Stock = Convert.ToInt32(reader["Stock"]),
+                    Price = Convert.ToDecimal(reader["Price"]),
+
+                    Status = (ProductCategoryStatus)Enum.Parse(
+                typeof(ProductCategoryStatus),
+                reader["Status"].ToString()
+            )
+                    
                 });
             }
 
