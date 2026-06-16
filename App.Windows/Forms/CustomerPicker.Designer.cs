@@ -139,6 +139,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "CustomerPicker";
             Text = "CustomerPicker";
+            Load += CustomerPicker_Load;
             tableLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();

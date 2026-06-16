@@ -39,8 +39,8 @@ namespace App.Windows.Forms
         {
             var customers = string.IsNullOrWhiteSpace(query)
                 ? _customerService.GetAll()
-                : _customerService.Search(query);             
-               _bindingsource. DataSource = customers;
+                : _customerService.Search(query);
+            _bindingsource.DataSource = customers;
             lbCustomer.DisplayMember = "Name";
             lbCustomer.ValueMember = "Id";
         }
@@ -85,6 +85,11 @@ namespace App.Windows.Forms
         {
             this.DialogResult = DialogResult.Cancel;
             Close();
+
+        }
+
+        private void CustomerPicker_Load(object sender, EventArgs e)
+        {
 
         }
     }

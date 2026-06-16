@@ -234,6 +234,7 @@
             dgvCustomer.RowHeadersWidth = 62;
             dgvCustomer.Size = new Size(880, 295);
             dgvCustomer.TabIndex = 1;
+            dgvCustomer.CellContentClick += dgvCustomer_CellContentClick;
             // 
             // colId
             // 

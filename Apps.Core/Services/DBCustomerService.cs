@@ -161,7 +161,7 @@ namespace Apps.Core.Services
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-
+                
                 string sql = @"SELECT Id, Name, Email, Phone, Address
                        FROM Customer
                        WHERE Name LIKE @query

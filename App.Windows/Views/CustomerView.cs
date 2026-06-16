@@ -16,7 +16,7 @@ namespace App.Windows.View
         {
             InitializeComponent();
             _customerService = _service;
-            dgvCustomer.DataSource =  _bindingSource;
+            dgvCustomer.DataSource = _bindingSource;
             LoadCustomer();
         }
         private void LoadCustomer()
@@ -54,13 +54,13 @@ namespace App.Windows.View
                 using var form = new CustomerForm(_customerService, CustomerFormModeEnum.Edit, selectedCustomer);
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    LoadCustomer(); 
+                    LoadCustomer();
                 }
             }
 
         }
 
-     
+
         private void tspView_Click(object sender, EventArgs e)
         {
             var selectedCustomer = _bindingSource.Current as Customer;
@@ -112,6 +112,11 @@ namespace App.Windows.View
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             Applyfilters();
+        }
+
+        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
