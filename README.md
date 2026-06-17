@@ -26,8 +26,7 @@ Electronics Store is a .NET C# application developed in Visual Studio for managi
 * .NET SDK
 * SQL Server 
 
-## Installation
 
-## Author
+
 
 Mahtab Ch
